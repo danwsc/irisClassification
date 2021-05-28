@@ -22,12 +22,12 @@ labels = ['Iris Setosa', 'Iris Versicolour', 'Iris Virginica']
 app = Flask(__name__, template_folder='templates')
 # CORS(app) # to enable CORS middleware for all origins
 
-model = None
-if os.path.isfile(Settings.modelFile):
-    print('Model file found. Loading model .....')
-    model = pickle.load(open(Settings.modelFile, 'rb'))
-else:
-    print('Model file not found. Model not loaded.')
+# model = None
+# if os.path.isfile(Settings.modelFile):
+#     print('Model file found. Loading model .....')
+#     model = pickle.load(open(Settings.modelFile, 'rb'))
+# else:
+#     print('Model file not found. Model not loaded.')
 
 #@app.route('/', methods=['GET','POST'])
 @app.route('/')
@@ -91,8 +91,8 @@ def predict():
     data[0,1] = info['sepalWidth']
     data[0,2] = info['petalLength']
     data[0,3] = info['petalWidth']
-    output = model.predict(data)[0]
-    # output = 0
+    # output = model.predict(data)[0]
+    output = 0
 
     if output >= 0 and output < 3:
         info['prediction'] = labels[output]
