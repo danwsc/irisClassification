@@ -25,7 +25,7 @@ app = Flask(__name__, template_folder='templates')
 model = None
 # if os.path.isfile(Settings.modelFile):
 #     print('Model file found. Loading model .....')
-model = pickle.load(open(Settings.modelFile, 'rb'))
+#     model = pickle.load(open(Settings.modelFile, 'rb'))
 # else:
 #     print('Model file not found. Model not loaded.')
 
