@@ -16,6 +16,8 @@ numpy==1.19.2
 protobuf==3.16.0
 pycparser==2.20
 PyJWT==2.1.0
+scikit-learn==0.24.1
+scipy==1.6.2
 six==1.15.0
 virtualenv==20.4.4
 Werkzeug==1.0.1
