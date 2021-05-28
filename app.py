@@ -29,7 +29,8 @@ app = Flask(__name__, template_folder='templates')
 # else:
 #     print('Model file not found. Model not loaded.')
 
-@app.route('/', methods=['GET','POST'])
+#@app.route('/', methods=['GET','POST'])
+@app.route('/')
 def homepage():
     return render_template('login.html',
                             loggingIn=False, # user needs login screen
