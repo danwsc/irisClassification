@@ -4,6 +4,7 @@ Created on Mon May  3 20:28:22 2021
 
 @author: Lenovo
 """
+from config.Settings import Settings
 # from mysql.connector import pooling
 import mariadb
 import sys
@@ -15,11 +16,11 @@ class DatabasePool:
         connection_pool = mariadb.ConnectionPool(
             pool_name = 'ws_pool',
             pool_size = 5,
-            host = 'localhost',
+            host = Settings.host,
             port = 3306,
-            user = 'root',
-            password = '',
-            database='irisdb'
+            user = Settings.user,
+            password = Settings.password,
+            database=Settings.database
         )
     except mariadb.Error as e:
         print(f"Error connecting to MariaDB Platform: {e}")
