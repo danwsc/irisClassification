@@ -2,8 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
     var li = {{ loggingIn|tojson }};
     var rg = {{ registering|tojson }};
@@ -80,7 +80,6 @@
     <div class="modal-dialog modal-sm">
         <!-- Modal content -->
           <div class="modal-content">
-            <div class="modal-header"></div>
             <div class="modal-body">
               <form method="POST" action="/verifyUser" >
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -104,7 +103,6 @@
                 {% endif %}
               </div>
             </div>
-            <div class="modal-footer"></div>
           </div>
     </div>
   </div>
@@ -112,7 +110,6 @@
     <div class="modal-dialog modal-sm">
         <!-- Modal content -->
           <div class="modal-content">
-            <div class="modal-header"></div>
             <div class="modal-body">
               <form method="POST" action="/user" >
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -141,7 +138,6 @@
                 {% endif %}
               </div>
             </div>
-            <div class="modal-footer"></div>
           </div>
     </div>
   </div>
@@ -149,7 +145,6 @@
     <div class="modal-dialog modal-sm">
         <!-- Modal content -->
           <div class="modal-content">
-            <div class="modal-header"></div>
             <div class="modal-body">
               <form method="POST" action="/userChangePassword" >
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -177,7 +172,6 @@
                 {% endif %}
               </div>
             </div>
-            <div class="modal-footer"></div>
           </div>
     </div>
   </div>
