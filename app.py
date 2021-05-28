@@ -23,14 +23,13 @@ app = Flask(__name__, template_folder='templates')
 # CORS(app) # to enable CORS middleware for all origins
 
 model = None
-model = pickle.load(open('model.pkl', 'rb'))
-# if os.path.isfile(Settings.modelFile):
-#     print('Model file found. Loading model .....')
-#     
-# else:
-#     print('Model file not found. Model not loaded.')
+if os.path.isfile(Settings.modelFile):
+    print('Model file found. Loading model .....')
+    model = pickle.load(open(Settings.modelFile, 'rb'))
+    
+else:
+    print('Model file not found. Model not loaded.')
 
-#@app.route('/', methods=['GET','POST'])
 @app.route('/')
 def homepage():
     return render_template('login.html',
