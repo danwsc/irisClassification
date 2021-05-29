@@ -17,7 +17,6 @@ def require_login(func):
             try:
                 print('auth_token found')
                 # auth_token = auth_token.encode('utf-8')
-                print('Validator.py')
                 payload = jwt.decode(auth_token, Settings.secretKey, algorithms=["HS256"])
                 g.userid = payload['userid'] # update info in flask application context's g which lasts for one req/res cycle
                 g.role = payload['role']
