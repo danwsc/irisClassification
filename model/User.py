@@ -4,8 +4,8 @@ Created on Mon May  3 20:35:00 2021
 
 @author: Lenovo
 """
-from model.DatabasePool import DatabasePool
-# from model.DatabasePoolMySQL import DatabasePool
+# from model.DatabasePool import DatabasePool
+from model.DatabasePoolMySQL import DatabasePool
 from config.Settings import Settings
 
 import datetime
