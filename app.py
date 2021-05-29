@@ -70,11 +70,11 @@ def changingpage():
                             displayMesgr=False,
                             displayMesgf=False),200
 
-@app.route('/shortcut', methods=['GET','POST'])
+# @app.route('/shortcut', methods=['GET','POST'])
 # @require_login
-def shortcut():
-    info = Prediction.initPredInfo()
-    return render_template('prediction.html', info=info),200
+# def shortcut():
+#     info = Prediction.initPredInfo()
+#     return render_template('prediction.html', info=info),200
 
 @app.route('/predict', methods=['POST'])
 @require_login
