@@ -92,6 +92,7 @@ class User:
                     # which is not accepted by flask.jsonify.
                     # Here the whole jwtToken is decoded to a string and posted in
                     # the bearer field of postman 
+                    print('User.py')
                     jwtToken = jwtToken.decode('utf-8')
                     return {'jwt' : jwtToken}
                 else:
