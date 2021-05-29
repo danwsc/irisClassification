@@ -10,10 +10,10 @@ class Settings:
 
     if dbUsed == 'maria':
         #Staging on local machine
-        host='localhost'
-        database='irisdb'
-        user='root'
-        password=''
+        host='REDACTED'
+        database='REDACTED'
+        user='REDACTED'
+        password='REDACTED'
     else:
         #Staging on heroku
         host=os.environ['HOST']
