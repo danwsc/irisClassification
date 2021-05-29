@@ -5,8 +5,8 @@ Created on Mon May  3 20:28:22 2021
 @author: Lenovo
 """
 from config.Settings import Settings
-# from mysql.connector import pooling
 import mariadb
+
 import sys
 
 class DatabasePool:

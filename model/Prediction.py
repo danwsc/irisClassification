@@ -4,8 +4,12 @@ Created on Mon May  3 20:35:00 2021
 
 @author: Lenovo
 """
-# from model.DatabasePool import DatabasePool
-from model.DatabasePoolMySQL import DatabasePool
+from config.Settings import *
+if Settings.dbUsed == 'maria':
+    from model.DatabasePool import DatabasePool
+else:
+    from model.DatabasePoolMySQL import DatabasePool
+
 from datetime import datetime
 
 class Prediction:

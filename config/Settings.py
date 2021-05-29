@@ -6,14 +6,17 @@ class Settings:
 
     modelFile = "data/model.pkl" # machine learning model
 
-    #Staging on local machine
-    #host='localhost'
-    #database='irisdb'
-    #user='root'
-    #password=''
+    dbUsed = 'jawsdb'
 
-    #Staging on heroku
-    host=os.environ['HOST']
-    database=os.environ['DATABASE']
-    user=os.environ['USERNAME']
-    password=os.environ['PASSWORD']
+    if dbUsed == 'maria':
+        #Staging on local machine
+        host='localhost'
+        database='irisdb'
+        user='root'
+        password=''
+    else:
+        #Staging on heroku
+        host=os.environ['HOST']
+        database=os.environ['DATABASE']
+        user=os.environ['USERNAME']
+        password=os.environ['PASSWORD']

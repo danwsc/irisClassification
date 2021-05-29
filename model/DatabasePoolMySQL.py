@@ -6,7 +6,7 @@ Created on Mon May  3 20:28:22 2021
 """
 from config.Settings import Settings
 from mysql.connector import Error, pooling
-# import mariadb
+
 import sys
 
 class DatabasePool:
@@ -23,7 +23,7 @@ class DatabasePool:
             database= Settings.database
         )
     except Error as e:
-        print(f"Error connecting to MariaDB Platform: {e}")
+        print(f"Error connecting to MySQL Platform: {e}")
         sys.exit(1)
     
     @classmethod
